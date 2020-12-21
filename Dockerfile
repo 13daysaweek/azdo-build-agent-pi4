@@ -27,8 +27,8 @@ RUN apt-get install -y --no-install-recommends apt-utils \
 
 WORKDIR /azp
 
-COPY ./start.sh .
-RUN chmod +x start.sh
+COPY ./start.sh ./agent-health.sh ./
+RUN chmod +x start.sh && chmod +x agent-health.sh
 
 CMD ["./start.sh"]
 
